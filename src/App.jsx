@@ -127,131 +127,87 @@ function App() {
   // Landing Page - Choose Customer or Admin
   if (!userRole) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4 relative overflow-hidden">
-        {/* Animated background elements */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/20 via-rose-900/20 to-orange-900/20"></div>
-        <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-orange-400/30 to-rose-400/30 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-yellow-400/10 to-orange-400/10 rounded-full blur-2xl animate-spin duration-20000"></div>
-        
-        <div className="relative z-10 w-full max-w-md mx-auto">
-          {/* Glass morphism container */}
-          <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl shadow-2xl p-8 relative overflow-hidden group hover:bg-white/15 transition-all duration-500">
-            {/* Inner glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-transparent to-purple-500/10 rounded-3xl"></div>
-            
-            <div className="relative z-10">
-              {/* Logo section with enhanced animation */}
-              <div className="text-center mb-10">
-                <div className="relative inline-block">
-                  <div className="text-8xl mb-6 animate-bounce relative">
-                    🔥
-                    <div className="absolute inset-0 text-8xl animate-pulse text-orange-400/50 blur-sm">🔥</div>
-                  </div>
-                </div>
-                
-                <h1 className="text-5xl font-black bg-gradient-to-r from-orange-400 via-rose-400 to-purple-400 bg-clip-text text-transparent mb-4 tracking-tight">
-                  Flame Grilled
-                </h1>
-                <h2 className="text-3xl font-light text-white/90 mb-4 tracking-wide">
-                  CAFE
-                </h2>
-                <div className="w-20 h-1 bg-gradient-to-r from-orange-400 to-rose-400 mx-auto rounded-full mb-4"></div>
-                <p className="text-white/70 text-lg font-light">Experience premium dining at your fingertips</p>
-              </div>
-              
-              {/* Action buttons with premium styling */}
-              <div className="space-y-4">
-                <button 
-                  onClick={() => setUserRole('customer')}
-                  className="group relative w-full bg-gradient-to-r from-orange-500 via-rose-500 to-purple-500 text-white font-bold py-6 px-8 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-                >
-                  {/* Button glow effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-rose-400 to-purple-400 opacity-0 group-hover:opacity-30 transition-opacity duration-300 blur-xl"></div>
-                  
-                  {/* Button content */}
-                  <div className="relative z-10 flex items-center justify-center space-x-4">
-                    <span className="text-3xl animate-pulse">📱</span>
-                    <div className="text-left">
-                      <div className="text-xl font-black tracking-wide">ORDER FOOD</div>
-                      <div className="text-sm font-light opacity-90">Browse menu & place order</div>
-                    </div>
-                  </div>
-                </button>
-                
-                <button 
-                  onClick={() => setUserRole('admin')}
-                  className="group relative w-full bg-gradient-to-r from-slate-700 via-slate-800 to-slate-900 text-white font-bold py-6 px-8 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-                >
-                  {/* Button glow effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-slate-400 via-slate-500 to-slate-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl"></div>
-                  
-                  {/* Button content */}
-                  <div className="relative z-10 flex items-center justify-center space-x-4">
-                    <span className="text-3xl">👨‍💼</span>
-                    <div className="text-left">
-                      <div className="text-xl font-black tracking-wide">STAFF LOGIN</div>
-                      <div className="text-sm font-light opacity-90">Manage orders & menu</div>
-                    </div>
-                  </div>
-                </button>
-              </div>
-              
-              {/* Enhanced footer */}
-              <div className="mt-8 text-center">
-                <div className="text-white/50 text-sm font-light">
-                  Powered by modern technology
-                </div>
-                <div className="flex justify-center space-x-4 mt-4 text-white/30">
-                  <div className="text-xs">🔒 Secure</div>
-                  <div className="text-xs">⚡ Fast</div>
-                  <div className="text-xs">📱 Mobile</div>
-                </div>
-              </div>
+      <div className="min-h-screen bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md mx-auto">
+          <div className="text-center mb-8">
+            <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">🔥</span>
             </div>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">
+              Flame Grilled Cafe
+            </h1>
+            <p className="text-gray-600">Choose your access level</p>
+          </div>
+          
+          <div className="space-y-4">
+            <button 
+              onClick={() => setUserRole('customer')}
+              className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold py-4 px-6 rounded-xl hover:from-orange-600 hover:to-red-600 transition-all duration-200 transform hover:scale-105 shadow-lg"
+            >
+              <div className="flex items-center justify-center space-x-3">
+                <span className="text-xl">📱</span>
+                <div className="text-left">
+                  <div className="font-bold">Customer</div>
+                  <div className="text-sm opacity-90">Browse menu & order</div>
+                </div>
+              </div>
+            </button>
+            
+            <button 
+              onClick={() => setUserRole('admin')}
+              className="w-full bg-gray-600 text-white font-bold py-4 px-6 rounded-xl hover:bg-gray-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
+            >
+              <div className="flex items-center justify-center space-x-3">
+                <span className="text-xl">👨‍💼</span>
+                <div className="text-left">
+                  <div className="font-bold">Admin</div>
+                  <div className="text-sm opacity-90">Manage restaurant</div>
+                </div>
+              </div>
+            </button>
           </div>
         </div>
       </div>
     )
   }
 
-  // Customer App - Ultra-Modern Mobile Design
+  // Customer App - Clean Professional Design
   if (userRole === 'customer') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-orange-50 to-rose-50">
-        {/* Premium Mobile Header with Glass Morphism */}
-        <header className="bg-white/80 backdrop-blur-xl border-b border-white/20 sticky top-0 z-50 shadow-xl shadow-orange-500/10">
-          <div className="px-6 py-4">
+      <div className="min-h-screen bg-gray-50">
+        {/* Header */}
+        <header className="bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg">
+          <div className="px-4 py-4">
             <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-3">
                 <button 
                   onClick={() => setUserRole(null)}
-                  className="group p-3 bg-gradient-to-r from-orange-500 to-rose-500 text-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+                  className="p-2 bg-white/20 rounded-lg hover:bg-white/30 transition-colors"
                 >
-                  <svg className="w-5 h-5 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                   </svg>
                 </button>
-                <div>
-                  <h1 className="text-2xl font-black bg-gradient-to-r from-orange-600 to-rose-600 bg-clip-text text-transparent tracking-tight">
-                    🔥 Flame Grilled
-                  </h1>
-                  <p className="text-sm font-medium text-slate-500 flex items-center">
-                    <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-                    Ready for delivery
-                  </p>
+                <div className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                    <span className="text-lg">🔥</span>
+                  </div>
+                  <div>
+                    <h1 className="text-xl font-bold">Flame Grilled Cafe</h1>
+                    <p className="text-sm text-orange-100">Fresh • Fast • Delicious</p>
+                  </div>
                 </div>
               </div>
               
               <button 
                 onClick={() => setShowCartSlideout(!showCartSlideout)}
-                className="group relative p-4 bg-gradient-to-r from-orange-500 to-rose-500 text-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-110"
+                className="relative p-3 bg-white/20 rounded-lg hover:bg-white/30 transition-colors"
               >
-                <svg className="w-6 h-6 transition-transform group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m0 0h8" />
                 </svg>
                 {getCartItemCount() > 0 && (
-                  <span className="absolute -top-2 -right-2 bg-gradient-to-r from-red-500 to-rose-500 text-white text-xs font-black rounded-full w-7 h-7 flex items-center justify-center animate-bounce shadow-lg">
+                  <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
                     {getCartItemCount()}
                   </span>
                 )}
@@ -260,112 +216,86 @@ function App() {
           </div>
         </header>
 
-        {/* Ultra-Modern Search Bar */}
-        <div className="p-6 bg-gradient-to-r from-white via-orange-50 to-white">
-          <div className="relative group">
+        {/* Search Bar */}
+        <div className="bg-white p-4 shadow-sm">
+          <div className="relative">
             <input
               type="text"
               placeholder="Search delicious food..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-14 pr-6 py-5 bg-white/80 backdrop-blur-xl border border-white/30 rounded-3xl focus:ring-4 focus:ring-orange-500/20 focus:border-orange-400 text-lg font-medium shadow-xl transition-all duration-300 group-hover:shadow-2xl placeholder-slate-400"
+              className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent"
             />
-            <div className="absolute left-5 top-1/2 transform -translate-y-1/2">
-              <div className="p-2 bg-gradient-to-r from-orange-500 to-rose-500 rounded-full">
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </div>
-            </div>
+            <svg className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
           </div>
         </div>
 
-        {/* Premium Category Pills */}
-        <div className="px-6 py-4 bg-gradient-to-r from-white via-rose-50 to-white">
-          <div className="flex space-x-4 overflow-x-auto scrollbar-hide pb-2">
+        {/* Categories */}
+        <div className="bg-white p-4 border-b border-gray-200">
+          <div className="flex space-x-3 overflow-x-auto scrollbar-hide">
             {categories.map(category => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`group relative px-8 py-4 rounded-2xl font-bold text-lg whitespace-nowrap transition-all duration-300 transform hover:scale-105 shadow-lg ${
+                className={`px-4 py-2 rounded-full font-medium whitespace-nowrap transition-all duration-200 ${
                   selectedCategory === category
-                    ? 'bg-gradient-to-r from-orange-500 to-rose-500 text-white shadow-xl shadow-orange-500/30'
-                    : 'bg-white/80 backdrop-blur-xl text-slate-600 hover:bg-gradient-to-r hover:from-orange-100 hover:to-rose-100 border border-white/30'
+                    ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
-                {/* Glow effect for active category */}
-                {selectedCategory === category && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-rose-400 rounded-2xl blur-xl opacity-30 -z-10"></div>
-                )}
                 {category}
               </button>
             ))}
           </div>
         </div>
 
-        {/* Menu Items - Ultra-Premium Cards */}
-        <div className="px-6 py-4 pb-32">
-          <div className="space-y-6">
+        {/* Menu Items */}
+        <div className="p-4 pb-24">
+          <div className="space-y-4">
             {filteredItems.map(item => (
-              <div key={item.id} className="group relative bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-white/30 overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02]">
-                {/* Premium gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 via-transparent to-rose-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
-                <div className="relative z-10 flex">
-                  <div className="flex-1 p-8">
-                    {/* Header with badges */}
-                    <div className="flex items-start justify-between mb-4">
+              <div key={item.id} className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all duration-200">
+                <div className="flex">
+                  <div className="flex-1 p-6">
+                    <div className="flex items-start justify-between mb-3">
                       <div className="flex-1">
-                        <div className="flex items-center space-x-3 mb-3">
-                          <h3 className="text-2xl font-black text-slate-800 tracking-tight">{item.name}</h3>
+                        <div className="flex items-center space-x-2 mb-2">
+                          <h3 className="text-lg font-bold text-gray-900">{item.name}</h3>
                           {item.popular && (
-                            <span className="bg-gradient-to-r from-orange-500 to-rose-500 text-white text-xs font-black px-3 py-1.5 rounded-full shadow-lg animate-pulse">
-                              🔥 POPULAR
+                            <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                              🔥 Popular
                             </span>
                           )}
                         </div>
-                        <p className="text-slate-600 text-base mb-4 leading-relaxed font-medium">{item.description}</p>
+                        <p className="text-gray-600 text-sm mb-3">{item.description}</p>
                         
-                        {/* Enhanced stats */}
-                        <div className="flex items-center space-x-6 text-sm mb-6">
-                          <div className="flex items-center space-x-2 bg-gradient-to-r from-yellow-100 to-orange-100 px-3 py-2 rounded-full">
-                            <span className="text-lg">⭐</span>
-                            <span className="font-black text-slate-700">{item.rating}</span>
+                        <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
+                          <div className="flex items-center space-x-1">
+                            <span>⭐</span>
+                            <span className="font-medium">{item.rating}</span>
                           </div>
-                          <div className="flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-purple-100 px-3 py-2 rounded-full">
-                            <span className="text-lg">⏱️</span>
-                            <span className="font-bold text-slate-700">{item.prep_time}</span>
+                          <div className="flex items-center space-x-1">
+                            <span>⏱️</span>
+                            <span>{item.prep_time}</span>
                           </div>
                         </div>
                       </div>
                     </div>
                     
-                    {/* Price and CTA */}
                     <div className="flex items-center justify-between">
-                      <span className="text-3xl font-black bg-gradient-to-r from-orange-600 to-rose-600 bg-clip-text text-transparent">
-                        R{item.price.toFixed(2)}
-                      </span>
+                      <span className="text-2xl font-bold text-orange-600">R{item.price.toFixed(2)}</span>
                       <button 
                         onClick={() => addToCart(item)}
-                        className="group relative bg-gradient-to-r from-orange-500 to-rose-500 text-white px-8 py-4 rounded-2xl font-black text-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-110"
+                        className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-lg font-bold hover:from-orange-600 hover:to-red-600 transition-all duration-200 transform hover:scale-105 shadow-lg"
                       >
-                        {/* Button glow */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-rose-400 opacity-0 group-hover:opacity-50 transition-opacity duration-300 blur-xl"></div>
-                        
-                        <span className="relative z-10 flex items-center space-x-2">
-                          <span>Add to Cart</span>
-                          <span className="text-xl transition-transform group-hover:translate-x-1">🛒</span>
-                        </span>
+                        Add to Cart
                       </button>
                     </div>
                   </div>
                   
-                  {/* Enhanced food image */}
-                  <div className="relative w-40 h-40 bg-gradient-to-br from-orange-100 to-rose-100 flex items-center justify-center overflow-hidden">
-                    <div className="text-6xl group-hover:scale-110 transition-transform duration-500">
-                      {item.emoji}
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="w-32 h-32 bg-gray-100 flex items-center justify-center text-4xl">
+                    {item.emoji}
                   </div>
                 </div>
               </div>
